@@ -23,10 +23,11 @@ let list2= "Is popular"
 ReactDOM.render(<App />, document.getElementById("root"))
 
 // components
-function Header(){
+// pass variable - defined down in App
+function Header(props){
     return (
         <header>
-            <h1>Amanda's Kitchen</h1>
+            <h1>{props.name}'s Kitchen</h1>
         </header>
     )
 }
@@ -42,7 +43,7 @@ function Main(){
 function App(){
     return(
         <div>
-            <Header />
+            <Header name="Amanda" />
             <Main />
         </div>
     )
