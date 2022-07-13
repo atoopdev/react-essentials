@@ -6,9 +6,15 @@ let heading = React.createElement("h1", null, "Reasons to Learn React")
 // )
 
 // redo above in JSX
+// is dependent on babel compiler
+let list1= "Is cool"
+let list2= "Is popular"
+
+// replace content with variables
+// note can manip var
 let ul = ReactDOM.render(
     <ul>
-        <li>Is cool</li>
-        <li>Is popular</li>
+        <li>{list1.toUpperCase()}</li>
+        <li>{list2}</li>
     </ul>
 , document.getElementById("root"))
