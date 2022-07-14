@@ -32,19 +32,31 @@ function Header(props){
     )
 }
 
-function Main(){
+function Main(props){
     return(
-        <section><p>We serve the best food around.</p></section>
+        <section><p>We serve the most {props.adjective} food around.</p></section>
     )
 
 }
 
+function Footer(props){
+    return (
+        <footer>
+            <p>Copyright {props.year}</p>
+        </footer>
+    )
+}
+
 // What will output to screen
+// pass name vlaue to header
+// value must be added where item is being rendered
+// note numbers must be wrapped in curly braces, same with functions
 function App(){
     return(
         <div>
             <Header name="Amanda" />
-            <Main />
+            <Main adjective="amazing"/>
+            <Footer year={new Date().getFullYear()} />
         </div>
     )
 }
