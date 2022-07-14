@@ -89,6 +89,7 @@ function Header(props) {
   function Main(props) {
     return (
       <section>
+        <img height={200} src="./pexels-pixabay-262978.jpg" alt="A server presents two plates"></img>
         <h2>Our Menu:</h2>
         <ul>
           {props.dishes.map((dish) => (
