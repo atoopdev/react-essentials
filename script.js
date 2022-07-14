@@ -84,13 +84,15 @@ function Header(props) {
       </header>
     );
   }
+
+//   keys keep your data in synch
   function Main(props) {
     return (
       <section>
         <h2>Our Menu:</h2>
         <ul>
           {props.dishes.map((dish) => (
-            <li>{dish}</li>
+            <li key={dish.id}>{dish.title}</li>
           ))}
         </ul>
       </section>
@@ -108,8 +110,15 @@ function Header(props) {
   const dishes = [
     "Black Bean Soup",
     "Macaroni and Cheese",
-    "Salmon and Potatoes"
+    "Salmon and Potatoes",
+    "Pizza"
   ];
+//   convert simple array to object array with index - to keep data in synch when rendering
+  const dishObjects = dishes.map(
+    (dish, i) =>({
+    id:i,
+    title:dish
+  }))
 
   function App() {
     return (
@@ -117,7 +126,7 @@ function Header(props) {
         <Header name="Cindy" />
         <Main
           adjective="amazing"
-          dishes={dishes}
+          dishes={dishObjects}
         />
         <Footer
           year={new Date().getFullYear()}
