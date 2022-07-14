@@ -121,9 +121,10 @@ function Header(props) {
     title:dish
   }))
 
+//   replace div with React.Fragment
   function App() {
     return (
-      <div>
+      <React.Fragment>
         <Header name="Cindy" />
         <Main
           adjective="amazing"
@@ -132,7 +133,7 @@ function Header(props) {
         <Footer
           year={new Date().getFullYear()}
         />
-      </div>
+      </React.Fragment.Fragment>
     );
   }
 
